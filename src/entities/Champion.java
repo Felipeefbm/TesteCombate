@@ -48,12 +48,12 @@ public class Champion {
 		this.armor = armor;
 	}
 
-	public void takeDamage(Champion other){ //  bizu maximo, sem necessidade de usar champion1 e champion2
-		if (this.armor >= other.atack) {             // se a armadura do boneco que vai sofrer dano, for maior que o ataque do boneco atacante, 
-			this.life -=1;							//  boneco vai recebe somente um de dano
+	public void takeDamage(Champion other){ 
+		if (this.armor >= other.atack) {              
+			this.life -=1;							
 		}
 		else {
-			this.life -= (other.atack - this.armor);       // se nao, recebe o dano do atacante mitigado pela sua armadura   
+			this.life -= (other.atack - this.armor);         
 		}
 		
 	}
