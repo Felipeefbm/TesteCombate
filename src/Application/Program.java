@@ -9,7 +9,7 @@ public class Program {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		Champion champion1, champion2; // construtor
+		Champion champion1, champion2; 
 		
 		
 		
@@ -22,7 +22,7 @@ public class Program {
 		int atack1 = sc.nextInt();
 		System.out.print("Armadura: ");
 		int armor1 = sc.nextInt();
-		champion1 = new Champion(name1, life1, atack1, armor1);  //instanciaçao dos campeões/objeto
+		champion1 = new Champion(name1, life1, atack1, armor1);  
 		
 		
 		System.out.println("\n");
@@ -38,21 +38,21 @@ public class Program {
 		int atack2 = sc.nextInt();
 		System.out.print("Armadura: ");
 		int armor2 = sc.nextInt();
-		champion2 = new Champion(name2, life2, atack2, armor2);  //instanciaçao dos campeões/objeto
+		champion2 = new Champion(name2, life2, atack2, armor2);  
 		
 		
-		System.out.println("Quantos turnos voce precisa executar? ");
+		System.out.print("Quantos turnos voce precisa executar? ");
 		int fim = 0, turn = sc.nextInt();
 		
 		while(fim != turn ){
 			fim += 1;
 			
-			if (champion1.getLife() > 0 && champion2.getLife() > 0 ) {  // champion1.life nao pode ser uado pq os atributos estao encapsulados usa se o getLife
-				champion1.takeDamage(champion2);    //bizu   boneco 1 recebe dano do boneco 2
-				champion2.takeDamage(champion1);    // bizu
+			if (champion1.getLife() > 0 && champion2.getLife() > 0 ) {  
+				champion1.takeDamage(champion2);    
+				champion2.takeDamage(champion1);    
 				System.out.println();
 				
-				System.out.println("Resultado do " + fim + "turno: ");	
+				System.out.println("Resultado do " + fim + "° turno: "  );	
 				System.out.println(champion1.status());
 			    System.out.println(champion2.status());
 			}
